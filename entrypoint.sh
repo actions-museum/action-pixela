@@ -31,6 +31,7 @@ main() {
     "quantity": "${quantity}"
 }
 EOF
+    return "$?"
 }
 
 main "$@"
