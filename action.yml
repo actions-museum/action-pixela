@@ -1,7 +1,7 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'pixela-action'
+description: 'Post metrics to Pixela'
 inputs:
-  date:  # id of input
+  date: 
     description: 'Event time'
     required: false
     default: ''
@@ -14,13 +14,19 @@ inputs:
     default: '1'
   username: 
     description: 'Username of the graph owner'
-    required: false
-    default: ''
+    required: true
+  token: 
+    description: 'Credential to access the API'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.username }}
-    - ${{ inputs.graph }}
+    - ${{ inputs.token }}
+    - ${{ inputs.graph-id }}
     - ${{ inputs.quantity }}
     - ${{ inputs.date }}
+branding:
+  icon: 'git-commit'
+  color: 'green'
