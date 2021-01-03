@@ -10,6 +10,5 @@ jobs:
         uses: ./
         with:
           graph-id: test-count
-        env:
-          PIXELA_USERNAME: ${{ secrets.PIXELA_USERNAME }}
-          PIXELA_TOKEN: ${{ secrets.PIXELA_TOKEN }}
+          username: ${{ secrets.PIXELA_USERNAME }}
+          token: ${{ secrets.PIXELA_TOKEN }}
