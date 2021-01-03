@@ -1,0 +1,15 @@
+name: Test
+on: pull_request
+
+jobs:
+  test-count-metric:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: With
+        uses: ./
+        with:
+          graph-id: test-count
+        env:
+          PIXELA_USERNAME: ${{ secrets.PIXELA_USERNAME }}
+          PIXELA_TOKEN: ${{ secrets.PIXELA_TOKEN }}

@@ -1,15 +1,26 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  date:  # id of input
+    description: 'Event time'
+    required: false
+    default: ''
+  graph-id:
+    description: 'Name of the graph'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  quantity:
+    description: 'Value of the event' 
+    required: false
+    default: '1'
+  username: 
+    description: 'Username of the graph owner'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.username }}
+    - ${{ inputs.graph }}
+    - ${{ inputs.quantity }}
+    - ${{ inputs.date }}
