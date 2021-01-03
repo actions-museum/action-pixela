@@ -23,6 +23,7 @@ main() {
 
     curl \
         -s \
+        --fail \
         -H "X-USER-TOKEN:${token}" \
         -X POST "${PIXELA_POST_BASE_URL}/users/${username}/graphs/${graph}" \
         -d @- <<EOF
