@@ -1,4 +1,4 @@
-name: 'pixela-action'
+name: 'action-pixela'
 description: 'Post metrics to Pixela'
 inputs:
   date: 
