@@ -52,3 +52,7 @@ No outputs.
 
 [mergify]: https://mergify.io
 [mergify-status]: https://img.shields.io/endpoint.svg?url=https://gh.mergify.io/badges/KeisukeYamashita/pixela-action&style=flat
+
+## License
+
+Released by [MIT License](./LICENSE).
